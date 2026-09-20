@@ -8,88 +8,280 @@
 </head>
 
 <body>
-    <center>
-        <big style="color:green; font-size:2rem;">411854 &emsp; &emsp;MUHAMMAD JUNAID</big>
-        <br>
-        <Img src="./smit.png" alt="SMIT Image">
+    <div class="page-shell">
+        <header class="top-bar">
+            <span class="student-id">411854</span>
+            <span class="student-name">MUHAMMAD JUNAID</span>
+        </header>
+
+        <img class="logo" src="./smit.png" alt="SMIT Image">
         <h2>Saylani Online Academy</h2>
-        <br>
-        <form action="./registration success.html" style="width: 650px; height: 850px; background-color: lightgrey;">
-            <br>
+
+        <form action="./registration success.html" class="registration-form">
             <h3>Student Registration Form</h3>
-            <label for="name">Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <input type="text" id="name" placeholder="Name" name="Name" required size="50" style="height: 25px;">
-            <br><br>
-            <label for="fname">Father's Name&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;</label>
-            <input type="text" id="fname" placeholder="Father's Name" name="fname" required size="50"
-                style="height: 25px;">
-            <br><br>
-            <label for="pword">Password&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <input type="text" id="pword" placeholder="Password" name="pword" required minlength="8" size="50"
-                style="height: 25px;">
-            <br><br>
-            <label for="addr">Address&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <textarea id="addr" name="addr" rows="7" cols="48"></textarea>
-            <br><br>
-            <label for="Gender">Gender&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;</label>
-            <input type="radio" id="gender" name="Gender" value="Male" required>
-            <label for="Gender">Male</label>
-            <input type="radio" id="gender" name="Gender" value="Female" required>
-            <label for="Gender">Female</label>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <br><br>
-            <label for="Lang">&nbsp;&nbsp;Language&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <input type="checkbox" id="lang" name="lang" value="Urdu">
-            <label for="Language">Urdu</label>
-            <input type="checkbox" id="lang" name="lang" value="English">
-            <label for="Language">English</label>
-            <input type="checkbox" id="lang" name="lang" value="Arabic">
-            <label for="Language">Arabic</label>
-            <input type="checkbox" id="lang" name="lang" value="Chinees">
-            <label for="Language">Chinees</label>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <br><br>
-            <label for="dob">DOB&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <input type="date" id="dob" name="dob" required size="50" style="height: 25px;">
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <br><br>
-            <label for="email">&emsp;Email&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <input type="email" id="email" placeholder="Email Id" required name="email" size="50" style="height: 25px;">
-            &emsp;&nbsp;&nbsp;
-            <br><br>
-            <label for="mob">&emsp;Mobile Number&emsp;&emsp;&emsp;</label>
-            <input type="number" id="mob" placeholder="Mobile Number" required name="mob" size="50"
-                style="height: 25px;">
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <br><br>
-            <label for="city">City&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <select id="city" name="city">
-                <option value="Select Your City" disabled selected>Select Your City</option>
-                <option value="HYDERABAD">HYDERABAD</option>
-                <option value="KARACHI">KARACHI</option>
-                <option value="MIRPURKHAS">MIRPURKHAS</option>
-                <option value="NAWABSHAH">NAWABSHAH</option>
-                <option value="SUKKUR">SUKKUR</option>
-            </select>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <br><br>
-            <label for="hobi">Hobbies&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <select id="hobi" name="hobi" multiple size="4">
-                <option value="Cricket">Cricket</option>
-                <option value="Football">Football</option>
-                <option value="Hockey">Hockey</option>
-                <option value="Tennis">Tennis</option>
-            </select>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <br><br>
-            <label for="pic">Picture Upload&emsp;&emsp;&emsp;</label>
-            <input type="file" id="pic" accept="IMAGE/*,pdf">
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br><br>
-            <br>
-            <input type="submit" value="Submit Form">
-            <br>
+
+            <div class="form-grid">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Name" name="Name" required>
+
+                <label for="fname">Father's Name</label>
+                <input type="text" id="fname" placeholder="Father's Name" name="fname" required>
+
+                <label for="pword">Password</label>
+                <input type="password" id="pword" placeholder="Password" name="pword" required minlength="8">
+
+                <label for="addr">Address</label>
+                <textarea id="addr" name="addr" rows="5" placeholder="Your address"></textarea>
+
+                <label for="gender">Gender</label>
+                <div class="radio-group">
+                    <label class="choice"><input type="radio" id="gender" name="Gender" value="Male" required> Male</label>
+                    <label class="choice"><input type="radio" id="gender" name="Gender" value="Female" required> Female</label>
+                </div>
+
+                <label for="lang">Language</label>
+                <div class="checkbox-group">
+                    <label class="choice"><input type="checkbox" id="lang" name="lang" value="Urdu"> Urdu</label>
+                    <label class="choice"><input type="checkbox" id="lang" name="lang" value="English"> English</label>
+                    <label class="choice"><input type="checkbox" id="lang" name="lang" value="Arabic"> Arabic</label>
+                    <label class="choice"><input type="checkbox" id="lang" name="lang" value="Chinees"> Chinees</label>
+                </div>
+
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Id" required name="email">
+
+                <label for="mob">Mobile Number</label>
+                <input type="number" id="mob" placeholder="Mobile Number" required name="mob">
+
+                <label for="city">City</label>
+                <select id="city" name="city">
+                    <option value="Select Your City" disabled selected>Select Your City</option>
+                    <option value="HYDERABAD">HYDERABAD</option>
+                    <option value="KARACHI">KARACHI</option>
+                    <option value="MIRPURKHAS">MIRPURKHAS</option>
+                    <option value="NAWABSHAH">NAWABSHAH</option>
+                    <option value="SUKKUR">SUKKUR</option>
+                </select>
+
+                <label for="hobby">Hobbies</label>
+                <div class="checkbox-group" id="hobby-group">
+                    <label class="choice"><input type="checkbox" name="hobby" value="Cricket"> Cricket</label>
+                    <label class="choice"><input type="checkbox" name="hobby" value="Football"> Football</label>
+                    <label class="choice"><input type="checkbox" name="hobby" value="Hockey"> Hockey</label>
+                    <label class="choice"><input type="checkbox" name="hobby" value="Tennis"> Tennis</label>
+                </div>
+
+                <label for="pic">Picture Upload</label>
+                <input type="file" id="pic" accept="image/*,.pdf">
+            </div>
+
+            <button type="submit">Submit Form</button>
         </form>
-    </center>
+    </div>
+
+    <script>
+        const registrationForm = document.querySelector('.registration-form');
+
+        registrationForm.addEventListener('submit', function (event) {
+            const selectedHobbies = registrationForm.querySelectorAll('input[name="hobby"]:checked');
+
+            if (selectedHobbies.length === 0) {
+                event.preventDefault();
+                alert('Please select at least one hobby.');
+            }
+        });
+    </script>
+
+    <style>
+        :root {
+            --bg-1: #eef6ff;
+            --bg-2: #dfeeff;
+            --card: rgba(255, 255, 255, 0.9);
+            --primary: #1d4ed8;
+            --primary-dark: #173ea8;
+            --accent: #10b981;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --border: #dbeafe;
+            --shadow: 0 20px 50px rgba(49, 95, 164, 0.18);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+        }
+
+        .page-shell {
+            width: min(100%, 980px);
+            text-align: center;
+            padding: 25px 18px 40px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #0f7a3b;
+        }
+
+        .student-id,
+        .student-name {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 999px;
+            padding: 10px 18px;
+        }
+
+        .logo {
+            width: 110px;
+            height: auto;
+            margin-top: 8px;
+            filter: drop-shadow(0 12px 18px rgba(29, 78, 216, 0.15));
+        }
+
+        h2 {
+            margin: 14px 0 22px;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: #0b1d4d;
+        }
+
+        .registration-form {
+            width: min(100%, 820px);
+            margin: 0 auto;
+            background: var(--card);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            border-radius: 26px;
+            box-shadow: var(--shadow);
+            padding: 28px 28px 34px;
+        }
+
+        .registration-form h3 {
+            margin: 0 0 24px;
+            font-size: 2rem;
+            color: var(--primary-dark);
+            letter-spacing: 0.5px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 16px 18px;
+            align-items: center;
+            text-align: left;
+        }
+
+        .form-grid label {
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .form-grid input,
+        .form-grid textarea,
+        .form-grid select {
+            width: 100%;
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            background: #f9fbff;
+            padding: 12px 14px;
+            font-size: 1rem;
+            transition: 0.2s ease;
+            color: var(--text);
+        }
+
+        .form-grid input:focus,
+        .form-grid textarea:focus,
+        .form-grid select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.1);
+            background: #fff;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 22px;
+            padding: 8px 2px;
+        }
+
+        .choice {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .choice input {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+        }
+
+        button {
+            margin-top: 26px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            font-size: 1.08rem;
+            font-weight: 700;
+            padding: 14px 28px;
+            cursor: pointer;
+            box-shadow: 0 12px 20px rgba(16, 185, 129, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 24px rgba(16, 185, 129, 0.28);
+        }
+
+        @media (max-width: 700px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .form-grid label {
+                margin-bottom: -4px;
+            }
+
+            .registration-form {
+                padding: 22px 18px 28px;
+            }
+
+            .top-bar {
+                gap: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </body>
 
 </html>
